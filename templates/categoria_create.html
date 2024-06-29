@@ -1,21 +1,21 @@
 {% load static %}
 
 <!DOCTYPE html>
-<html>
-<head>
-    <title>Crear Categoría</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-</head>
-<body>
-    <div class="content section">
-        <div class="block">
-            <h2>Crear Categoría</h2>
-            <form method="post">
-                {% csrf_token %}
-                {{ form.as_p }}
-                <button type="submit">Crear</button>
-            </form>
-        </div>
-    </div>
-</body>
+<html> 
+    <head> 
+        <title>Crear CategorÃ­a</title> 
+        <link rel="stylesheet" href="{% static 'styles.css' %}"> 
+    </head> 
+    <body> 
+        <div class="content section"> 
+            <div class="block">
+                <h2>Crear CategorÃ­a</h2>
+                <form method="post">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit">Crear</button>
+                </form>
+            </div> 
+        </div> 
+    </body> 
 </html>

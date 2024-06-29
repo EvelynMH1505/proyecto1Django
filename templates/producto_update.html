@@ -1,11 +1,21 @@
-class ProductoUpdateView(UpdateView):
-    model = Producto
-    template_name = "producto_update.html"
-    fields = [
-        "nombre",
-        "descripcion",
-        "precio",
-        "disponibilidad",
-        "categoria",
-    ]
-    success_url = "/"
+{% load static %}
+
+<!DOCTYPE html>
+<html> 
+    <head> 
+        <title>Actualizar Producto</title> 
+        <link rel="stylesheet" href="{% static 'styles.css' %}"> 
+    </head> 
+    <body> 
+        <div class="content section"> 
+            <div class="block">
+                <h2>Actualizar Producto</h2>
+                <form method="post">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit">Actualizar</button>
+                </form>
+            </div> 
+        </div> 
+    </body> 
+</html>

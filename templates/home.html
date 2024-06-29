@@ -1,16 +1,232 @@
-<!-- {% load static %} -->
+{% load static %}
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'styles.css' %}">
-    <title>Prueba</title>
+    <title>Menú Digital - "EL CHARRO"</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+        header {
+            background-color: #343a40;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+        .category {
+            background-color: #fff;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .category h2 {
+            margin-top: 0;
+            color: #ff6347;
+            text-align: left;
+        }
+        .product {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #e9ecef;
+            align-items: center;
+        }
+        .product:last-child {
+            border-bottom: none;
+        }
+        .product-info {
+            flex: 1;
+            margin-left: 20px;
+            text-align: left;
+        }
+        .product-image {
+            max-width: 100px;
+            max-height: 100px;
+            border-radius: 8px;
+        }
+        .product h3 {
+            margin: 0;
+            font-size: 18px;
+            color: #343a40;
+        }
+        .product p {
+            margin: 5px 0;
+            color: #6c757d;
+        }
+        .product-price {
+            font-weight: bold;
+            color: #ff6347;
+        }
+        .add-btn {
+            background-color: #ff6347;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .add-btn:hover {
+            background-color: #e55347;
+        }
+        footer {
+            background-color: #343a40;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
-    <div class="main-test">
-        Hello, World!
+
+<header>
+    <h1>Menú Digital - "EL CHARRO"</h1>
+    <p>Descubre nuestros auténticos sabores de nuestra tierra natal</p>
+</header>
+
+<div class="container">
+    <!-- Categoría: Entradas -->
+    <div class="category">
+        <h2>Entradas</h2>
+        <div class="product">
+            <img src="C:\Users\Casa\Desktop\EL CHARRO\guacamole-casero.jpg" alt="Guacamole" class="product-image">
+            <div class="product-info">
+                <h3>Guacamole</h3>
+                <p>Tradicional guacamole con totopos.</p>
+                <p class="product-price">$65 MXN</p>
+            </div>
+            <button class="add-btn">Agregar</button>
+        </div>
+        <div class="product">
+            <img src="C:\Users\Casa\Desktop\EL CHARRO\receta-quesadillas.jpg" alt="Quesadillas" class="product-image">
+            <div class="product-info">
+                <h3>Quesadillas</h3>
+                <p>Queso manchego fundido en tortillas de maíz.</p>
+                <p class="product-price">$25 MXN</p>
+            </div>
+            <button class="add-btn">Agregar</button>
+        </div>
+        <div class="product">
+            <img src="C:\Users\Casa\Desktop\EL CHARRO\sopesimages.jpg" alt="Sopes" class="product-image">
+            <div class="product-info">
+                <h3>Sopes</h3>
+                <p>Base de maíz con frijoles y carne.</p>
+                <p class="product-price">$45 MXN (orden de 3)</p>
+            </div>
+            <button class="add-btn">Agregar</button>
+        </div>
+        <div class="product">
+            <img src="C:\Users\Casa\Desktop\EL CHARRO\ceviche.jpg" alt="Ceviche" class="product-image">
+            <div class="product-info">
+                <h3>Ceviche</h3>
+                <p>Pescado marinado en jugo de limón.</p>
+                <p class="product-price">$90 MXN (medio kilo)</p>
+            </div>
+            <button class="add-btn">Agregar</button>
+        </div>
     </div>
+
+    <!-- Categoría: Platos Principales -->
+    <div class="category">
+        <h2>Platos Principales</h2>
+        <div class="product">
+            <img src="C:\Users\Casa\Desktop\EL CHARRO\tacosalpasot.jpg" alt="Tacos al Pastor" class="product-image">
+            <div class="product-info">
+                <h3>Tacos al Pastor</h3>
+                <p>Tacos de cerdo adobado con piña.</p>
+                <p class="product-price">$30 MXN (orden de 5)</p>
+            </div>
+            <button class="add-btn">Agregar</button>
+        </div>
+        <div class="product">
+            <img src="C:\Users\Casa\Desktop\EL CHARRO\enchiladas-verdes-receta.jpg" alt="Enchiladas" class="product-image">
+            <div class="product-info">
+                <h3>Enchiladas</h3>
+                <p>Tortillas rellenas bañadas en salsa verde.</p>
+                <p class="product-price">$56 MXN</p>
+            </div>
+            <button class="add-btn">Agregar</button>
+        </div>
+        <div class="product">
+            <img src="C:\Users\Casa\Desktop\EL CHARRO\mole poblano.jpg" alt="Mole Poblano" class="product-image">
+            <div class="product-info">
+                <h3>Mole Poblano</h3>
+                <p>Pollo en salsa de chocolate y especias.</p>
+                <p class="product-price">$100 MXN</p>
+            </div>
+            <button class="add-btn">Agregar</button>
+        </div>
+        <div class="product">
+            <img src="C:\Users\Casa\Desktop\EL CHARRO\asadito.jpg" alt="Asadito" class="product-image">
+            <div class="product-info">
+                <h3>Asadito</h3>
+                <p>Carne asada con pimientos y cebolla.</p>
+                <p class="product-price">$80 MXN</p>
+            </div>
+            <button class="add-btn">Agregar</button>
+        </div>
+    </div>
+    <!-- Categoría: Postres -->
+    <div class="category">
+        <h2>Postres</h2>
+        <div class="product">
+            <img src="C:\Users\Casa\Desktop\EL CHARRO\churros.jpg" alt="Churros" class="product-image">
+            <div class="product-info">
+                <h3>Churros</h3>
+                <p>Churros fritos con azúcar y canela.</p>
+                <p class="product-price">$5 MXN (por unidad)</p>
+            </div>
+            <button class="add-btn">Agregar</button>
+        </div>
+        <div class="product">
+            <img src="C:\Users\Casa\Desktop\EL CHARRO\flan.jpg" alt="Flan" class="product-image">
+            <div class="product-info">
+                <h3>Flan</h3>
+                <p>Flan de caramelo suave y cremoso.</p>
+                <p class="product-price">$30 MXN</p>
+            </div>
+            <button class="add-btn">Agregar</button>
+        </div>
+        <div class="product">
+            <img src="C:\Users\Casa\Desktop\EL CHARRO\arrozconleche.jpg" alt="Arroz con Leche" class="product-image">
+            <div class="product-info">
+                <h3>Arroz con Leche</h3>
+                <p>Arroz dulce con leche y canela.</p>
+                <p class="product-price">$20 MXN</p>
+            </div>
+            <button class="add-btn">Agregar</button>
+        </div>
+        <div class="product">
+            <img src="C:\Users\Casa\Desktop\EL CHARRO\nieve.jpg" alt="Helado de Mango" class="product-image">
+            <div class="product-info">
+                <h3>Helado de Mango</h3>
+                <p>Helado cremoso de mango natural.</p>
+                <p class="product-price">$25 MXN</p>
+            </div>
+            <button class="add-btn">Agregar</button>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>© 2023 Restaurante "EL CHARRO". Todos los derechos reservados.</p>
+</footer>
+
 </body>
 </html>
