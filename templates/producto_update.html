@@ -1,0 +1,11 @@
+class ProductoUpdateView(UpdateView):
+    model = Producto
+    template_name = "producto_update.html"
+    fields = [
+        "nombre",
+        "descripcion",
+        "precio",
+        "disponibilidad",
+        "categoria",
+    ]
+    success_url = "/"
